@@ -12,7 +12,9 @@ class Book extends Component {
 }
 
 Book.propTypes = {
-
+  book: PropTypes.object.isRequired,
+  currentShelf: PropTypes.string.isRequired,
+  
 };
 
 export default Book;
