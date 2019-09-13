@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Book extends Component {
+
+  returnShelfOptions = () => {
+    return this.props.shelfs.map(shelf => {
+      return <option value={shelf.shelfProperty} selected={this.props.book.shelf === shelf.shelfProperty}>{shelf.shelfTitle}</option>
+    });
+  }
+
   render() {
     return (
       <li>
@@ -11,9 +18,7 @@ class Book extends Component {
             <div className="book-shelf-changer">
               <select>
                 <option value="move" disabled>Move to...</option>
-                <option value="currentlyReading">Currently Reading</option>
-                <option value="wantToRead">Want to Read</option>
-                <option value="read">Read</option>
+                {this.returnShelfOptions()}
                 <option value="none">None</option>
               </select>
             </div>
@@ -27,6 +32,7 @@ class Book extends Component {
 }
 
 Book.propTypes = {
+  shelfs: PropTypes.array.isRequired,
   book: PropTypes.object.isRequired,
   setShelf: PropTypes.func.isRequired
 };

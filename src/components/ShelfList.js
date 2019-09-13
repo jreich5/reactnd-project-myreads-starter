@@ -15,7 +15,8 @@ class ShelfList extends Component {
           {this.props.shelfs.map(shelf => <Shelf 
             key={shelf.shelfProperty} 
             shelfTitle={shelf.shelfTitle} 
-            books={this.getShelfBooks(shelf.shelfProperty, this.props.books)} 
+            books={this.getShelfBooks(shelf.shelfProperty, this.props.books)}
+            shelfs={this.props.shelfs}
             setShelf={this.props.setShelf} />)}
         </div>
       </div>

@@ -7,7 +7,7 @@ class BookList extends Component {
     return (
       <div className="bookshelf-books">
         <ol className="books-grid">
-          {this.props.books.map(book => <Book key={book.id} book={book} setShelf={this.props.setShelf} />)}
+          {this.props.books.map(book => <Book shelfs={this.props.shelfs} key={book.id} book={book} setShelf={this.props.setShelf} />)}
         </ol>
       </div>
     );
