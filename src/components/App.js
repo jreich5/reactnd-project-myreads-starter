@@ -6,6 +6,22 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import HomePage from './HomePage'
 import SearchPage from './SearchPage'
 
+
+const shelfs = [
+  {
+    shelfTitle: "Currently Reading",
+    shelfProperty: "currentlyReading"
+  },
+  {
+    shelfTitle: "Want to Read",
+    shelfProperty: "wantToRead"
+  },
+  {
+    shelfTitle: "Read",
+    shelfProperty: "read"
+  }
+];
+
 class BooksApp extends React.Component {
   state = {
     books: []
@@ -37,8 +53,8 @@ class BooksApp extends React.Component {
           <div className="list-books-title">
             <h1>MyReads</h1>
           </div>
-          <Route exact path="/" render={() => <HomePage books={this.state.books} setShelf={this.setShelf} />} />
-          <Route exact path="/search" render={() => <SearchPage books={this.state.books} />} />
+          <Route exact path="/" render={() => <HomePage shelfs={shelfs} books={this.state.books} setShelf={this.setShelf} />} />
+          <Route exact path="/search" render={() => <SearchPage shelfs={shelfs} setShelf={this.setShelf} />} />
         </div>
       </Router>
     )

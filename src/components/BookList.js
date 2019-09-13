@@ -4,12 +4,10 @@ import Book from './Book'
 
 class BookList extends Component {
   render() {
-    return (
-      <div className="bookshelf-books">
-        <ol className="books-grid">
-          {this.props.books.map(book => <Book shelfs={this.props.shelfs} key={book.id} book={book} setShelf={this.props.setShelf} />)}
-        </ol>
-      </div>
+    return ( 
+      <ol className="books-grid">
+        {this.props.books.map(book => <Book shelfs={this.props.shelfs} key={book.id} book={book} setShelf={this.props.setShelf} />)}
+      </ol>
     );
   }
 }

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class Book extends Component {
 
   state = {
-    shelfSelection: this.props.book.shelf
+    shelfSelection: this.props.book.shelf || "none"
   }
 
   changeSelect = (e) => {
