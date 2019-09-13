@@ -3,9 +3,21 @@ import PropTypes from 'prop-types';
 
 class Book extends Component {
 
+  state = {
+    shelfSelection: this.props.book.shelf
+  }
+
+  changeSelect = (e) => {
+    console.log(e.target.value);
+    this.setState({shelfSelection: e.target.value}, () => {
+      console.log(this.state.shelfSelection);
+      this.props.setShelf(this.props.book, this.state.shelfSelection);
+    });
+  }
+
   returnShelfOptions = () => {
     return this.props.shelfs.map(shelf => {
-      return <option value={shelf.shelfProperty} selected={this.props.book.shelf === shelf.shelfProperty}>{shelf.shelfTitle}</option>
+      return <option key={shelf.shelfProperty} value={shelf.shelfProperty}>{shelf.shelfTitle}</option>
     });
   }
 
@@ -16,7 +28,7 @@ class Book extends Component {
           <div className="book-top">
             <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${this.props.book.imageLinks.thumbnail})` }}></div>
             <div className="book-shelf-changer">
-              <select>
+              <select value={this.state.value} onChange={this.changeSelect}>
                 <option value="move" disabled>Move to...</option>
                 {this.returnShelfOptions()}
                 <option value="none">None</option>

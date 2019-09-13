@@ -11,12 +11,17 @@ class BooksApp extends React.Component {
     books: []
   }
 
-  setShelf = () => {
-    console.log("Set shelf fired!");
+  setShelf = (book, shelf) => {
+    BooksAPI.update(book, shelf)
+      .then(BooksAPI.getAll)
+      .then(books => {
+        this.setState({books});
+      });  
   }
 
   populateBooks = () => {
     BooksAPI.getAll().then(books => {
+      console.log("api request fired")
       this.setState({ books });
     });
   }
