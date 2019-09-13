@@ -11,9 +11,12 @@ class BooksApp extends React.Component {
     books: []
   }
 
+  setShelf = () => {
+    console.log("Set shelf fired!");
+  }
+
   populateBooks = () => {
     BooksAPI.getAll().then(books => {
-      console.log(books);
       this.setState({ books });
     });
   }
@@ -26,7 +29,10 @@ class BooksApp extends React.Component {
     return (
       <Router>
         <div className="app">
-          <Route exact path="/" render={() => <HomePage books={this.state.books} />} />
+          <div className="list-books-title">
+            <h1>MyReads</h1>
+          </div>
+          <Route exact path="/" render={() => <HomePage books={this.state.books} setShelf={this.setShelf} />} />
           <Route exact path="/search" render={() => <SearchPage books={this.state.books} />} />
         </div>
       </Router>
