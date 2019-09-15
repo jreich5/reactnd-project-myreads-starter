@@ -34,7 +34,7 @@ class SearchPage extends Component {
       <div className="search-books">
         <Search updateSearchBooks={this.updateSearchBooks} />
         <div className="search-books-results">
-          <BookList shelfs={this.props.shelfs} books={this.state.searchBooks} setShelf={this.props.setShelf} />
+          <BookList shelfBooks={this.props.books} shelfs={this.props.shelfs} books={this.state.searchBooks} setShelf={this.props.setShelf} />
         </div>
       </div>
     );

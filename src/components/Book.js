@@ -10,7 +10,6 @@ class Book extends Component {
   changeSelect = (e) => {
     console.log(e.target.value);
     this.setState({shelfSelection: e.target.value}, () => {
-      console.log(this.state.shelfSelection);
       this.props.setShelf(this.props.book, this.state.shelfSelection);
     });
   }

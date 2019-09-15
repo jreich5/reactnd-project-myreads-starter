@@ -37,7 +37,6 @@ class BooksApp extends React.Component {
 
   populateBooks = () => {
     BooksAPI.getAll().then(books => {
-      console.log("api request fired")
       this.setState({ books });
     });
   }
@@ -54,7 +53,7 @@ class BooksApp extends React.Component {
             <h1>MyReads</h1>
           </div>
           <Route exact path="/" render={() => <HomePage shelfs={shelfs} books={this.state.books} setShelf={this.setShelf} />} />
-          <Route exact path="/search" render={() => <SearchPage shelfs={shelfs} setShelf={this.setShelf} />} />
+          <Route exact path="/search" render={() => <SearchPage books={this.state.books} shelfs={shelfs} setShelf={this.setShelf} />} />
         </div>
       </Router>
     )
