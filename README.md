@@ -2,7 +2,7 @@
 
 This is my solution for the final assessment project for Udacity's React Fundamentals course.
 
-## TL;DR
+## Running the Project
 
 To run the project:
 
