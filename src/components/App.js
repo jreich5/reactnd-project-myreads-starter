@@ -1,10 +1,9 @@
-import React from 'react'
-// import * as BooksAPI from './BooksAPI'
-import '../App.css'
-import * as BooksAPI from '../BooksAPI'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import HomePage from './HomePage'
-import SearchPage from './SearchPage'
+import React from 'react';
+import '../App.css';
+import * as BooksAPI from '../BooksAPI';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import SearchPage from './SearchPage';
 
 
 const shelfs = [

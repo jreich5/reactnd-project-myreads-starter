@@ -15,7 +15,7 @@ class Search extends Component {
 }
 
 Search.propTypes = {
-
+  updateSearchBooks: PropTypes.func.isRequired
 };
 
 export default Search;

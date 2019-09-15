@@ -42,7 +42,9 @@ class SearchPage extends Component {
 }
 
 SearchPage.propTypes = {
-  
+  books: PropTypes.array.isRequired,
+  shelfs: PropTypes.array.isRequired,
+  setShelf: PropTypes.func.isRequired
 };
 
 export default SearchPage;

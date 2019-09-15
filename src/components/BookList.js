@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Book from './Book'
+import Book from './Book';
 
 class BookList extends Component {
 
@@ -26,6 +26,8 @@ class BookList extends Component {
 }
 
 BookList.propTypes = {
+  shelfs: PropTypes.array.isRequired,
+  shelfBooks: PropTypes.array,
   books: PropTypes.array.isRequired,
   setShelf: PropTypes.func.isRequired
 };

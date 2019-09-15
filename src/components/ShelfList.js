@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Shelf from './Shelf'
+import Shelf from './Shelf';
 
 class ShelfList extends Component {
 

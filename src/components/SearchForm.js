@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class SearchForm extends Component {
 
@@ -29,9 +28,5 @@ class SearchForm extends Component {
     );
   }
 }
-
-SearchForm.propTypes = {
-
-};
 
 export default SearchForm;
