@@ -39,6 +39,7 @@ class SearchPage extends Component {
       </div>
     );
   }
+  
 }
 
 SearchPage.propTypes = {

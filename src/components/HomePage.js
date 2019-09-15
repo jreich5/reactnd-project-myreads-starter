@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class HomePage extends Component {
+
   render() {
     return (
       <div className="list-books">
@@ -14,6 +15,7 @@ class HomePage extends Component {
       </div>
     );
   }
+  
 }
 
 HomePage.propTypes = {

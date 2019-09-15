@@ -22,6 +22,7 @@ class ShelfList extends Component {
       </div>
     );
   }
+  
 }
 
 ShelfList.propTypes = {

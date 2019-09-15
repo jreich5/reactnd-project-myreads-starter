@@ -4,6 +4,7 @@ import SearchForm from './SearchForm'
 import { Link } from 'react-router-dom'
 
 class Search extends Component {
+
   render() {
     return (
       <div className="search-books-bar">
@@ -12,6 +13,7 @@ class Search extends Component {
       </div>
     );
   }
+  
 }
 
 Search.propTypes = {

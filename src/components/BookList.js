@@ -4,6 +4,9 @@ import Book from './Book';
 
 class BookList extends Component {
 
+  /**
+   * Update the list of books for booklist to include a shelf property for search page results that are in a shelf
+   */
   outputBooks = () => {
     const books = this.props.books;
     if (this.props.shelfBooks) {
@@ -23,6 +26,7 @@ class BookList extends Component {
       </ol>
     );
   }
+  
 }
 
 BookList.propTypes = {

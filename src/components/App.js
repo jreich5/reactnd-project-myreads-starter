@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import HomePage from './HomePage';
 import SearchPage from './SearchPage';
 
-
 const shelfs = [
   {
     shelfTitle: "Currently Reading",
@@ -22,10 +21,14 @@ const shelfs = [
 ];
 
 class BooksApp extends React.Component {
+
   state = {
     books: []
   }
 
+  /**
+   * Update state and API when a shelf is selected for a book
+   */
   setShelf = (book, shelf) => {
     BooksAPI.update(book, shelf)
       .then(BooksAPI.getAll)
@@ -57,6 +60,7 @@ class BooksApp extends React.Component {
       </Router>
     )
   }
+  
 }
 
 export default BooksApp

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import BookList from './BookList';
 
 class Shelf extends Component {
+
   render() {
     return (
       <div className="bookshelf">
@@ -13,6 +14,7 @@ class Shelf extends Component {
       </div>
     );
   }
+  
 }
 
 Shelf.propTypes = {

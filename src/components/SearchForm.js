@@ -27,6 +27,7 @@ class SearchForm extends Component {
       </div>
     );
   }
+  
 }
 
 export default SearchForm;

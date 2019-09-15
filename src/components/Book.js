@@ -8,12 +8,14 @@ class Book extends Component {
   }
 
   changeSelect = (e) => {
-    console.log(e.target.value);
     this.setState({shelfSelection: e.target.value}, () => {
       this.props.setShelf(this.props.book, this.state.shelfSelection);
     });
   }
 
+  /**
+   * Build JSX for shelf dropdown
+   */
   returnShelfOptions = () => {
     return this.props.shelfs.map(shelf => {
       return <option key={shelf.shelfProperty} value={shelf.shelfProperty}>{shelf.shelfTitle}</option>
@@ -46,6 +48,7 @@ class Book extends Component {
       </li>
     );
   }
+  
 }
 
 Book.propTypes = {
